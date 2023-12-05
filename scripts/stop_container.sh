@@ -5,7 +5,7 @@ set -e
 echo "Hi" 
 
 # Stopping all the running containers , -q displays only container id's
-docker container stop $(docker ps -q)
+#docker container stop $(docker ps -q)
 
 #Removing all containers after they are stopped , using -a flog so it displays containers in all states
-docker container rm $(docker ps -a -q)
+docker container rm -f $(docker ps -a -q)
